@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lesson: MyString
+  datetime: 2023-04-29 13:31:38
+  category: MyString
+  teacher: MyString
+
+two:
+  lesson: MyString
+  datetime: 2023-04-29 13:31:38
+  category: MyString
+  teacher: MyString
