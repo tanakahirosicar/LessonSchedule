@@ -20,39 +20,33 @@
   </aside>
 
   <main>
-    <table class="table table-striped table-hover">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">講座</th>
-          <th scope="col">時刻</th>
-          <th scope="col">分類</th>
-          <th scope="col">講師</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @lessons.each do |lesson| %>
-          <tr>
-            <td><%= check_box :lesson_user, :attend, {class: "check_box"}, true, false %></td>
-            <td><%= lesson.lesson %></td>
-            <td><%= l lesson.datetime %></td>
-            <td><%= lesson.category %></td>
-            <td><%= lesson.teacher %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <br>
     <%= form_with(@lesson_user) do |f| %>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">講座</th>
+            <th scope="col">時刻</th>
+            <th scope="col">分類</th>
+            <th scope="col">講師</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @lessons.each do |lesson| %>
+            <tr>
+              <td><%= check_box :lesson_user, :attend, {class: "check_box"}, true, false %></td>
+              <td><%= lesson.lesson %></td>
+              <td><%= l lesson.datetime %></td>
+              <td><%= lesson.category %></td>
+              <td><%= lesson.teacher %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
       <div class="actions">
         <%= f.submit "受講登録" %>
       </div>
-  <% end %> 
+    <% end %>
   </main>
-
-
-
 </div>
-
-
-
